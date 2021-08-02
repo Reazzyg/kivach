@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Black.woff") format("woff"), url("../fonts/Lato-Black.woff2") format("woff2");
+  font-weight: normal;
+  font-weight: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.header {
+  background-color: #262D33;
+  position: relative;
+}
+
+.header-navbar__logo {
+  max-height: 40px;
+  max-width: 163px;
+}
+
+.header-navbar__wrapper {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-navbar__ul {
+  min-width: 540px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-navbar__link {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.header-navbar__button {
+  background-color: #656B70;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 9px 64px;
+  text-transform: uppercase;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.content {
+  padding-top: 30px;
+  background-position: top bottom 125px;
+  background-color: #262D33;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__area {
+  display: none;
+  position: relative;
+  max-width: 877px;
+  max-height: 570px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  overflow: hidden;
+}
+
+.content__area-active {
+  display: block;
+}
+
+.content__background {
+  position: relative;
+  object-fit: cover;
+}
+
+.content__avatar {
+  position: absolute;
+  top: 55px;
+  left: 55px;
+  border-radius: 50%;
+}
+
+.content__name {
+  position: absolute;
+  top: 59px;
+  left: 110px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  mix-blend-mode: normal;
+  opacity: 0.85;
+  margin: 0;
+}
+
+.content__pro {
+  position: absolute;
+  top: 81px;
+  left: 110px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+  opacity: 0.4;
+}
+
+.content__type {
+  position: absolute;
+  left: 55px;
+  top: 245px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #4592FF;
+}
+
+.content__title {
+  position: absolute;
+  top: 280px;
+  left: 55px;
+  max-width: 598px;
+  margin: 0;
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+  color: #FFFFFF;
+}
+
+.content__button {
+  position: absolute;
+  bottom: 100px;
+  left: 55px;
+  background: #4592FF;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #FFFFFF;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.content__arrow {
+  width: 20px;
+  margin-left: 5px;
+}
+
+.content-tab {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 263px;
+  max-height: 570px;
+  background-color: #fff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.content-tab__title {
+  margin: 0;
+  padding-left: 25px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #262D33;
+}
+
+.content-tab__ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content-tab__heading {
+  text-transform: uppercase;
+  color: #3BBDC4;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.5px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.content-tab__item {
+  border-top: 1px solid #D9DADB;
+  padding: 18px 25px;
+  cursor: pointer;
+}
+
+.content-tab__item-active {
+  background-color: #F5F5F5;
+}
+
+.content-tab__text {
+  margin: 0;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4B5157;
+}
