@@ -1,40 +1,49 @@
 .header
   background-color: $grey
-  position: relative
-  &-navbar
-    &__logo
-      max-height: 40px
-      max-width: 163px
-    &__wrapper
-      padding-top: 15px
-      padding-bottom: 15px
-      display: flex
-      justify-content: space-between
-      align-items: center
-    &__ul
-      min-width: 540px
-      list-style: none
-      padding: 0
-      display: flex
-      justify-content: space-between
-    &__link
-      text-decoration: none
-      color: #fff
-      font-family: 'Lato'
-      font-style: normal
-      font-weight: 900
-      font-size: 14px
-      line-height: 20px
-    &__button
-      background-color: #656B70
-      border: none
-      border-radius: 10px
-      color: #fff
-      padding: 9px 64px
-      text-transform: uppercase
-      font-family: 'Lato'
-      font-style: normal
-      font-weight: normal
-      font-size: 14px
-      line-height: 20px
-      cursor: pointer
+
+.navbar
+  &__logo
+    max-height: 40px
+    max-width: 163px
+  &__wrapper
+    padding-top: 15px
+    padding-bottom: 15px
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__fixed
+    display: flex
+    align-items: center
+  &__ul
+    max-width: 540px
+    list-style: none
+    padding: 0
+    display: flex
+    justify-content: space-between
+    gap: 30px
+
+  &__link
+    text-decoration: none
+    color: #fff
+    font-family: 'Lato'
+    font-style: normal
+    font-weight: 900
+    font-size: 14px
+    line-height: 20px
+  &__button
+    padding: 9px 64px
+    margin-left: 89px
+    max-height: 39px
+    background-color: #656B70
+    border: none
+    border-radius: 10px
+    color: #fff
+    text-transform: uppercase
+    font-family: 'Lato'
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 20px
+    cursor: pointer
+  &__menu-button
+    display: none

@@ -1,0 +1,133 @@
+@media (max-width: 1200px)
+  .container
+    max-width: 960px
+  .navbar
+    &__logo
+      width: 125px
+      height: 50px
+    &__ul
+      gap: 25px
+    &__button
+      padding: 9px 50px
+      font-size: 12px
+@media (max-width: 992px)
+  .container
+    max-width: 760px
+  .navbar
+    &__logo
+      width: 100px
+      height: 25px
+    &__link
+      font-size: 12px
+    &__ul
+      gap: 15px
+    &__button
+      padding: 9px 20px
+@media (max-width: 768px)
+  .container
+    max-width: 576px
+    width: 92%
+  .navbar
+    &__fixed
+      display: none
+      &-visible
+        background-color: $grey
+        position: absolute
+        right: 0
+        left: 0
+        bottom: 0
+        top: 68px
+        z-index: 999
+        display: flex
+        justify-content: flex-start
+        flex-direction: column
+        align-items: center
+        margin: 0
+        max-width: 100%
+        padding-top: 30px
+    &__ul
+      flex-direction: column
+    &__button
+      margin: 0
+    &__menu-button
+      display: block
+  .menu
+    &-button
+      display: block
+      position: relative
+      width: 16px
+      height: 16px
+      padding: 0
+      border: none
+      background-color: $grey
+      cursor: pointer
+      &__line
+        position: absolute
+        display: block
+        width: 16px
+        height: 1px
+        background-color: #fff
+      &__line::before
+        content: ''
+        position: absolute
+        left: 0
+        width: 16px
+        height: 1px
+        background-color: #fff
+        transform: translateY(6px)
+      &__line::after
+        content: ''
+        position: absolute
+        left: 0
+        width: 16px
+        height: 1px
+        background-color: #fff
+        transform: translateY(-6px)
+      &__line-active
+        height: 0
+      &__line-active::before
+        height: 1px
+        transform: rotate(45deg)
+        transition: 0.2s
+      &__line-active::after
+        height: 1px
+        transform: rotate(-45deg)
+        transition: 0.2s
+  .content
+    &__avatar
+      left: 40px
+    &__name
+      left: 95px
+    &__pro
+      left: 95px
+    &-text
+      left: 40px
+      &__title
+        font-size: 30px
+        line-height: 40px
+      &__type
+        font-size: 15px
+@media (max-width: 576px)
+  .navbar
+
+  .content
+    &__area
+      border-top-right-radius: 10px
+      border-bottom-left-radius: 0px
+    &-wrapper
+      flex-direction: column
+    &__avatar
+      left: 20px
+    &__name
+      left: 75px
+    &__pro
+      left: 75px
+    &-text
+      left: 20px
+    &-tab
+      max-width: 100%
+      border-top-right-radius: 0
+      border-bottom-left-radius: 10px
+      &__ul
+        display: flex
+        flex-direction: row

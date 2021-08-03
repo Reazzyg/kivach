@@ -15,42 +15,46 @@
   <body>
     <header class="header">
       <div class="container">
-        <navbar class="header-navbar">
-          <div class="header-navbar__wrapper">
+        <div class="navbar">
+          <div class="navbar__wrapper">
             <a href="" class="link"
-              ><img src="img/logo.svg" alt="logo" class="header-navbar__logo"
+              ><img src="img/logo.svg" alt="logo" class="navbar__logo"
             /></a>
-            <ul class="header-navbar__ul">
-              <li class="header-navbar__item">
-                <a href="#" class="header-navbar__link">Статьи</a>
-              </li>
-              <li class="header-navbar__item">
-                <a href="#" class="header-navbar__link">Новости</a>
-              </li>
-              <li class="header-navbar__item">
-                <a href="#" class="header-navbar__link">Горячее</a>
-              </li>
-              <li class="header-navbar__item">
-                <a href="#" class="header-navbar__link">HTML</a>
-              </li>
-              <li class="header-navbar__item">
-                <a href="#" class="header-navbar__link">CSS</a>
-              </li>
-              <li class="header-navbar__item">
-                <a href="#" class="header-navbar__link">JavaScript</a>
-              </li>
-              <li class="header-navbar__item">
-                <a href="#" class="header-navbar__link">Web Design</a>
-              </li>
-            </ul>
-            <!-- /.navbar__ul -->
-            <button class="button header-navbar__button">
-              отставить заявку
+            <div class="navbar__fixed">
+              <ul class="navbar__ul">
+                <li class="navbar__item">
+                  <a href="#" class="navbar__link">Статьи</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#" class="navbar__link">Новости</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#" class="navbar__link">Горячее</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#" class="navbar__link">HTML</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#" class="navbar__link">CSS</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#" class="navbar__link">JavaScript</a>
+                </li>
+                <li class="navbar__item">
+                  <a href="#" class="navbar__link">Web Design</a>
+                </li>
+              </ul>
+              <!-- /.navbar__ul -->
+              <button class="navbar__button">оставить заявку</button>
+            </div>
+            <!-- /.navbar-fixed -->
+            <button class="menu-button navbar__menu-button">
+              <span class="menu-button__line"></span>
             </button>
           </div>
           <!-- /.navbar-wrapper -->
-        </navbar>
-        <!-- /.navbar -->
+        </div>
+        <!-- /.header-navbar -->
       </div>
       <!-- /.container -->
     </header>
@@ -59,7 +63,7 @@
     <section class="content">
       <div class="container">
         <div class="content-wrapper">
-          <div data-target="#first" class="content__area content__area-active">
+          <div id="first" class="content__area content__area-active">
             <img
               src="img/header-bg.jpg"
               alt="background image"
@@ -70,163 +74,168 @@
 
             <p class="content__name">Давид Гуров</p>
             <span class="content__pro">Разработчик</span>
-
-            <span class="content__type">Javascript</span>
-            <h2 class="content__title">Расширение Chrome защищает от атак</h2>
-            <button class="button content__button">
-              Читать далее
-              <img
-                src="img/Arrow.svg"
-                alt="Icon: Arrow"
-                class="content__arrow"
-              />
-            </button>
+            <div class="content-text">
+              <span class="content-text__type">Javascript</span>
+              <h2 class="content-text__title">
+                Расширение Chrome защищает от атак
+              </h2>
+              <button class="button content-text__button">
+                Читать далее
+                <img
+                  src="img/Arrow.svg"
+                  alt="Icon: Arrow"
+                  class="content__arrow"
+                />
+              </button>
+            </div>
           </div>
-          <div data-target="#second" class="content__area">
+          <div id="second" class="content__area">
             <img
               src="img/header-bg2.jpg"
               alt="background image"
               class="content__background"
             />
-            <img src="img/content-logo.png" alt="" class="content__avatar" />
-            <p class="content__name">
-              Давид Гуров<span class="content__pro">Разработчик</span>
-            </p>
-            <span class="content__type">CSS</span>
-            <h2 class="content__title">
-              Как использовать CSS float после того, как вышел Flexbox
-            </h2>
-            <button class="button content__button">
-              Читать далее
-              <img
-                src="img/Arrow.svg"
-                alt="Icon: Arrow"
-                class="content__arrow"
-              />
-            </button>
+            <img src="img/author-logo1.jpg" alt="" class="content__avatar" />
+            <p class="content__name">Давид Гуров</p>
+            <span class="content__pro">Разработчик</span>
+            <div class="content-text">
+              <span class="content-text__type">css</span>
+              <h2 class="content-text__title">
+                Как использовать CSS float после того, как вышел Flexbox
+              </h2>
+              <button class="button content-text__button">
+                Читать далее
+                <img
+                  src="img/Arrow.svg"
+                  alt="Icon: Arrow"
+                  class="content__arrow"
+                />
+              </button>
+            </div>
           </div>
 
-          <div data-target="#third" class="content__area">
+          <div id="third" class="content__area">
             <img
               src="img/header-bg3.jpg"
               alt="background image"
               class="content__background"
             />
-            <img src="img/content-logo.png" alt="" class="content__avatar" />
-            <p class="content__name">
-              Давид Гуров<span class="content__pro">Разработчик</span>
-            </p>
-            <span class="content__type">Javascript</span>
-            <h2 class="content__title">
-              На каком стандарте писать скрипты, если я фрилансер
-            </h2>
-            <button class="button content__button">
-              Читать далее
-              <img
-                src="img/Arrow.svg"
-                alt="Icon: Arrow"
-                class="content__arrow"
-              />
-            </button>
+            <img src="img/author-logo2.jpg" alt="" class="content__avatar" />
+            <p class="content__name">Давид Гуров</p>
+            <span class="content__pro">Разработчик</span>
+            <div class="content-text">
+              <span class="content-text__type">Javascript</span>
+              <h2 class="content-text__title">
+                На каком стандарте писать скрипты, если я фрилансер
+              </h2>
+              <button class="button content-text__button">
+                Читать далее
+                <img
+                  src="img/Arrow.svg"
+                  alt="Icon: Arrow"
+                  class="content__arrow"
+                />
+              </button>
+            </div>
           </div>
 
-          <div data-target="#fourth" class="content__area">
+          <div id="fourth" class="content__area">
             <img
               src="img/header-bg4.jpg"
               alt="background image"
               class="content__background"
             />
-            <img src="img/content-logo.png" alt="" class="content__avatar" />
-            <p class="content__name">
-              Давид Гуров<span class="content__pro">Разработчик</span>
-            </p>
-            <span class="content__type">HTML</span>
-            <h2 class="content__title">
-              Правильно вставляем картинку на сайт для Retina дисплея
-            </h2>
-            <button class="button content__button">
-              Читать далее
-              <img
-                src="img/Arrow.svg"
-                alt="Icon: Arrow"
-                class="content__arrow"
-              />
-            </button>
+            <img src="img/author-logo3.jpg" alt="" class="content__avatar" />
+            <p class="content__name">Давид Гуров</p>
+            <span class="content__pro">Разработчик</span>
+            <div class="content-text">
+              <span class="content-text__type">html</span>
+              <h2 class="content-text__title">
+                Правильно вставляем картинку на сайт для Retina дисплея
+              </h2>
+              <button class="button content-text__button">
+                Читать далее
+                <img
+                  src="img/Arrow.svg"
+                  alt="Icon: Arrow"
+                  class="content__arrow"
+                />
+              </button>
+            </div>
           </div>
 
-          <div data-target="#fifth" class="content__area">
+          <div id="fifth" class="content__area">
             <img
               src="img/header-bg5.jpg"
               alt="background image"
               class="content__background"
             />
-            <img src="img/content-logo.png" alt="" class="content__avatar" />
-            <p class="content__name">
-              Давид Гуров<span class="content__pro">Разработчик</span>
-            </p>
-            <span class="content__type">WEB DESIGN</span>
-            <h2 class="content__title">ТОП-10 плагинов для Figma</h2>
-            <button class="button content__button">
-              Читать далее
-              <img
-                src="img/Arrow.svg"
-                alt="Icon: Arrow"
-                class="content__arrow"
-              />
-            </button>
+            <img src="img/author-logo4.jpg" alt="" class="content__avatar" />
+            <p class="content__name">Давид Гуров</p>
+            <span class="content__pro">Разработчик</span>
+            <div class="content-text">
+              <span class="content-text__type">web design</span>
+              <h2 class="content-text__title">ТОП-10 плагинов для Figma</h2>
+              <button class="button content-text__button">
+                Читать далее
+                <img
+                  src="img/Arrow.svg"
+                  alt="Icon: Arrow"
+                  class="content__arrow"
+                />
+              </button>
+            </div>
           </div>
-          <div data-target="#sixth" class="content__area">
+          <div id="sixth" class="content__area">
             <img
-              src="img/header-bg5.jpg"
+              src="img/header-bg6.jpg"
               alt="background image"
               class="content__background"
             />
-            <img src="img/content-logo.png" alt="" class="content__avatar" />
-            <p class="content__name">
-              Давид Гуров<span class="content__pro">Разработчик</span>
-            </p>
-            <span class="content__type">css</span>
-            <h2 class="content__title">
-              Возможности CSS Grid Layout , которые уже можно применять
-            </h2>
-            <button class="button content__button">
-              Читать далее
-              <img
-                src="img/Arrow.svg"
-                alt="Icon: Arrow"
-                class="content__arrow"
-              />
-            </button>
+            <img src="img/author-logo5.jpg" alt="" class="content__avatar" />
+            <p class="content__name">Давид Гуров</p>
+            <span class="content__pro">Разработчик</span>
+            <div class="content-text">
+              <span class="content-text__type">css</span>
+              <h2 class="content-text__title">
+                Возможности CSS Grid Layout , которые уже можно применять
+              </h2>
+              <button class="button content-text__button">
+                Читать далее
+                <img
+                  src="img/Arrow.svg"
+                  alt="Icon: Arrow"
+                  class="content__arrow"
+                />
+              </button>
+            </div>
           </div>
           <div class="content-tab">
             <p class="content-tab__title">Рекомендуем</p>
             <ul class="content-tab__ul">
-              <li
-                id="second"
-                class="content-tab__item content-tab__item-active"
-              >
+              <li data-target="#second" class="content-tab__item">
                 <h3 class="content-tab__heading">css</h3>
                 <p class="content-tab__text">
                   Как использовать CSS float после того, как вышел Flexbox
                 </p>
               </li>
-              <li id="third" class="content-tab__item">
+              <li data-target="#third" class="content-tab__item">
                 <h3 class="content-tab__heading">JavaScript</h3>
                 <p class="content-tab__text">
                   На каком стандарте писать скрипты, если я фрилансер
                 </p>
               </li>
-              <li id="fourth" class="content-tab__item">
+              <li data-target="#fourth" class="content-tab__item">
                 <h3 class="content-tab__heading">html</h3>
                 <p class="content-tab__text">
                   Правильно вставляем картинку на сайт для Retina дисплея
                 </p>
               </li>
-              <li id="fifth" class="content-tab__item">
+              <li data-target="#fifth" class="content-tab__item">
                 <h3 class="content-tab__heading">Web design</h3>
                 <p class="content-tab__text">ТОП-10 плагинов для Figma</p>
               </li>
-              <li id="sixth" class="content-tab__item">
+              <li data-target="#sixth" class="content-tab__item">
                 <h3 class="content-tab__heading">css</h3>
                 <p class="content-tab__text">
                   Возможности CSS Grid Layout , которые уже можно применять
