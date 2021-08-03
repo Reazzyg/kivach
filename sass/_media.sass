@@ -1,3 +1,12 @@
+@media (min-width: 1100px)
+  .content
+    &-tab
+      &__item:hover
+        background-color: #F5F5F5
+  .advice
+    &__item:hover
+      transform: translateY(-15px)
+      transition: 0.5s all
 @media (max-width: 1200px)
   .container
     max-width: 960px
@@ -10,6 +19,12 @@
     &__button
       padding: 9px 50px
       font-size: 12px
+  .advice
+    &__item
+      padding-right: 20px
+      padding-left: 15px
+      font-size: 12px
+      line-height: 15px
 @media (max-width: 992px)
   .container
     max-width: 760px
@@ -23,6 +38,10 @@
       gap: 15px
     &__button
       padding: 9px 20px
+  .advice
+    &__item
+      padding-right: 15px
+      padding-left: 10px
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -36,7 +55,7 @@
         right: 0
         left: 0
         bottom: 0
-        top: 68px
+        top: 58px
         z-index: 999
         display: flex
         justify-content: flex-start
@@ -107,9 +126,19 @@
         line-height: 40px
       &__type
         font-size: 15px
+    &-tab
+      overflow: auto
+  .advice
+    &__ul
+      flex-wrap: wrap
+    &__item
+      padding-top: 10px
+      padding-bottom: 10px
+      border-right: none
+      border-bottom: 1px solid #4B5157
+    &__item:last-child
+      padding-right: 15px
 @media (max-width: 576px)
-  .navbar
-
   .content
     &__area
       border-top-right-radius: 10px

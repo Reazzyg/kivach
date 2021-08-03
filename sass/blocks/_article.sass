@@ -1,0 +1,184 @@
+.articles
+  padding-top: 30px
+  &-wrapper
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(4, 170px)
+    grid-gap: 30px
+  &-work
+    padding: 35px 0 0 35px
+    grid-column: span 2
+    grid-row: span 2
+    padding-left: 30px
+    max-width: 555px
+    background-color: #fff
+    display: flex
+    align-items: center
+    position: relative
+    border-radius: 10px
+    &__span
+      text-transform: uppercase
+      font-weight: 900
+      font-size: 12px
+      line-height: 15px
+      color: #6E99AE
+    &__title
+      margin: 0
+      margin-bottom: 25px
+      margin-top: 20px
+      font-family: Roboto Slab
+      font-style: normal
+      font-weight: bold
+      font-size: 25px
+      line-height: 30px
+      color: #262D33
+    &__text
+      margin: 0
+      margin-bottom: 110px
+      font-weight: normal
+      font-size: 14px
+      line-height: 20px
+      color: #4B5157
+  &-comment
+    padding: 12px 0 12px 30px
+    position: absolute
+    left: 0
+    bottom: 0
+    right: 0
+    display: flex
+    align-items: center
+    border-top: 1px solid #D9DADB
+    &__logo
+      border-radius: 50%
+      height: 30px
+      width: 30px
+      margin-right: 10px
+    &__name
+      font-weight: 900
+      font-size: 14px
+      line-height: 20px
+      color: #262D33
+    &__text
+      font-weight: normal
+      font-size: 14px
+      line-height: 20px
+      color: #4B5157
+    &__image
+      margin-left: 15px
+  &-portfolio
+    padding: 19px 25px 30px 25px
+    grid-column-start: 3
+    grid-row: span 2
+    background-image: url('../img/card-bg.png')
+    background-size: contain
+    background-repeat: no-repeat
+    border-radius: 10px
+    position: relative
+    &__logo
+      height: 45px
+      width: 45px
+      border-radius: 50%
+      margin-right: 10px
+    &__popular
+      position: absolute
+      top: 20px
+      left: 25px
+      padding: 5px 12px
+      border-radius: 5px
+      background-color: #3DC47E
+      color: #fff
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+    &__wrapper
+      position: absolute
+      top: 160px
+      left: 25px
+      max-width: 200px
+    &__type
+      font-weight: 900
+      font-size: 12px
+      line-height: 15px
+      text-transform: uppercase
+      color: #E7D9FF
+    &__text
+      font-family: Roboto Slab
+      font-style: normal
+      font-weight: bold
+      font-size: 16px
+      line-height: 25px
+      color: #fff
+      text-transform: uppercase
+  &-author
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    max-width: 157px
+    position: absolute
+    left: 55px
+    bottom: 6px
+    &__name
+      font-size: 14px
+      line-height: 20px
+      color: #fff
+      opacity: 0.85
+    &__date
+      font-size: 12px
+      line-height: 15px
+      color: #fff
+      opacity: 0.4
+      margin-right: 2px
+  &-download
+    padding: 25px
+    grid-column-start: 4
+    grid-row: 1/2
+    background-color: #3BBDC4
+    border-radius: 10px
+    position: relative
+    overflow: hidden
+    &__title
+      margin: 0
+      position: absolute
+      z-index: 2
+      font-family: Roboto Slab
+      font-style: normal
+      font-weight: bold
+      font-size: 16px
+      line-height: 25px
+      color: #fff
+    &__info
+      position: absolute
+      top: 85px
+      left: 25px
+      font-size: 14px
+      line-height: 20px
+      color: #C1F4F5
+    &__button
+      display: flex
+      align-items: center
+      justify-content: center
+      position: absolute
+      padding-top: 13px
+      bottom: 13px
+      left: 0
+      right: 0
+      background-color: inherit
+      color: #fff
+      width: 100%
+      border: none
+      border-top: 1px solid #96E2E3
+      cursor: pointer
+    &__image
+      margin-right: 10px
+  &-download::before
+    content: ''
+    background-image: url('../img/File.svg')
+    background-repeat: no-repeat
+    background-size: contain
+    position: absolute
+    top: 20px
+    right: 10px
+    z-index: 1
+    width: 80px
+    height: 80px
