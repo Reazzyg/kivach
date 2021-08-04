@@ -1,0 +1,44 @@
+.devider
+  position: relative
+  padding: 50px 210px 55px 210px
+  background-image: url('../img/coins-bg.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: rgba(64, 48, 61, 0.35)
+    z-index: 0
+  &-wrapper
+    position: relative
+    display: flex
+    align-items: center
+    flex-direction: column
+  &__title
+    text-align: center
+    font-family: Roboto Slab
+    font-style: normal
+    font-weight: bold
+    font-size: 40px
+    line-height: 50px
+    color: #fff
+  &__button
+    min-width: 163px
+    background: #4592FF
+    border-radius: 20px
+    padding: 10px 20px
+    color: #FFFFFF
+    font-family: Lato
+    font-style: normal
+    font-weight: 900
+    font-size: 14px
+    line-height: 20px
+    border: none
+    cursor: pointer
+  &__arrow
+    width: 20px
+    margin-left: 5px

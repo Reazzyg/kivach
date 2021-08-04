@@ -7,6 +7,44 @@
     &__item:hover
       transform: translateY(-15px)
       transition: 0.5s all
+  .articles
+    &-work:hover
+      transform: translate(-5px,-5px)
+      transition: 0.5s
+    &-portfolio:hover
+      transform: translate(-5px,-5px)
+      transition: 0.5s
+    &-instrument:hover
+      transform: translate(-5px,-5px)
+      transition: 0.5s
+    &-references:hover
+      transform: translate(-5px,-5px)
+      transition: 0.5s
+    &-clients:hover
+      transform: translate(-5px,-5px)
+      transition: 0.5s
+    &-workplace:hover
+      transform: translate(-5px,-5px)
+      transition: 0.5s
+    &-methods:hover
+      transform: translate(-5px,-5px)
+      transition: 0.5s
+    &-tags
+      &__button:hover
+        background-color: darken(#fff, 20%)
+    &-social
+      &__link:hover
+        transform: translateY(-15px)
+        transition: 0.3s
+  .news
+    &-card:hover
+      background-color: darken(#fff, 2%)
+  .recent
+    &-card:hover
+      background-color: darken(#fff, 2%)
+    &__button:hover
+      background-color: darken(#fff, 2%)
+
 @media (max-width: 1200px)
   .container
     max-width: 960px
@@ -25,6 +63,76 @@
       padding-left: 15px
       font-size: 12px
       line-height: 15px
+  .articles
+    &-work
+      &__image
+        max-width: 190px
+    &-comment
+      justify-content: space-between
+      &__logo
+        margin: 0
+      &__name
+        font-size: 12px
+        line-height: 15px
+      &__text
+        font-size: 12px
+        line-height: 15px
+      &__image
+        margin: 0
+    &-author
+      max-width: 110px
+      bottom: -4px
+    &-download
+      &__title
+        font-size: 14px
+        line-height: 20px
+    &-instrument
+      &__title
+        margin-left: 15px
+    &-references
+      &__title
+        font-size: 14px
+        line-height: 20px
+      &__text
+        font-size: 12px
+        line-height: 15px
+      &__date
+        font-size: 10px
+    &-workplace
+      &__title
+        font-size: 14px
+        line-height: 20px
+      &__text
+        font-size: 12px
+        line-height: 15px
+      &__date
+        font-size: 10px
+    &-clients
+      &__title
+        font-size: 14px
+        line-height: 20px
+      &__text
+        font-size: 12px
+        line-height: 15px
+      &__date
+        font-size: 10px
+    &-methods
+      &__title
+        font-size: 14px
+        line-height: 20px
+      &__text
+        font-size: 12px
+        line-height: 15px
+      &__date
+        font-size: 10px
+    &-tags
+      &__button
+        padding: 5px 10px
+        margin-right: 4px
+    &-social
+      &__icon
+        width: 45px
+        height: 45px
 @media (max-width: 992px)
   .container
     max-width: 760px
