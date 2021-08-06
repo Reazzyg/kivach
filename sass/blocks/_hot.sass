@@ -1,0 +1,200 @@
+.hot
+  padding: 60px 113px
+  background-color: #262D33
+  &-wrapper
+    display: grid
+    grid-template-columns: 1fr 0.5fr 0.5fr
+    grid-template-rows: 1fr 0.5fr
+    grid-gap: 30px
+    &__title
+      position: relative
+      z-index: 99
+  &-container
+    border-radius: 10px
+    overflow: hidden
+  &-slider
+    &__image
+      max-width: 555px
+      height: 570px
+      object-fit: cover
+
+.photoes
+  position: relative
+  grid-row: span 2
+  grid-column: 1
+  &__hot
+    position: absolute
+    z-index: 99
+    background-color: #3DC47E
+    padding: 5px 12px
+    border-radius: 3px
+    font-size: 12px
+    line-height: 15px
+    color: #fff
+    top: 18px
+    left: 18px
+  &__link
+    display: flex
+    flex-direction: column
+    align-items: center
+    top: 50px
+    left: 50%
+    transform: translateX(-50%)
+    position: absolute
+    z-index: 99
+    text-decoration: none
+  &__logo
+    width: 45px
+    height: 45px
+    border-radius: 50%
+    margin-bottom: 8px
+  &__name
+    font-size: 14px
+    line-height: 20px
+    color: #fff
+    opacity: 0.85
+  &__prof
+    font-size: 12px
+    line-height: 15px
+    color: #fff
+    opacity: 0.4
+  &__title
+    position: absolute
+    top: 170px
+    z-index: 99
+    margin: 0
+    font-family: Roboto Slab
+    font-style: normal
+    font-weight: bold
+    font-size: 40px
+    line-height: 50px
+    color: #fff
+    text-align: center
+    margin-bottom: 45px
+  &__button
+    position: absolute
+    bottom: 165px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 99
+    background-color: #4592FF
+    border-radius: 20px
+    padding: 10px 20px
+    border: none
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-weight: 900
+    font-size: 14px
+    line-height: 20px
+    color: #fff
+    cursor: pointer
+    text-decoration: none
+  &__img
+    margin-right: 8px
+  &__count
+    margin-left: 8px
+    font-weight: normal
+    font-size: 14px
+    line-height: 20px
+    color: #C5E4FC
+.swiper
+  &-container
+    max-width: 550px
+    height: 570px
+
+    position: relative
+.career
+  &-card
+    &-big
+      padding: 24px 307px 50px 35px
+      position: relative
+      grid-column: 2 / 4
+      grid-row: 1/2
+      background-color: #B4D1E0
+      border-radius: 10px
+      overflow: hidden
+      text-decoration: none
+    &__tag
+      font-weight: 900
+      font-size: 12px
+      line-height: 15px
+      color: #6E99AE
+      text-transform: uppercase
+      margin: 0
+    &__title
+      font-family: Roboto Slab
+      font-style: normal
+      font-weight: bold
+      font-size: 25px
+      line-height: 30px
+      color: #262D33
+      margin: 0
+      margin-bottom: 15px
+      margin-top: 23px
+      &-little
+        margin: 0
+        font-family: Roboto Slab
+        font-style: normal
+        font-weight: bold
+        font-size: 16px
+        line-height: 25px
+        color: #262D33
+    &__text
+      font-size: 14px
+      line-height: 20px
+      color: #4B5157
+      margin: 0
+      margin-bottom: 42px
+      &-little
+        font-size: 14px
+        line-height: 20px
+        color: #4B5157
+        margin: 0
+    &__button
+      position: relative
+      background-color: #4592FF
+      padding: 10px 20px
+      border-radius: 20px
+      text-decoration: none
+      display: flex
+      align-items: center
+      max-width: 160px
+      color: #fff
+      cursor: pointer
+    &__arrow
+      margin-left: 5px
+    &-big:before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      background-image: url('../img/career-bg.png')
+      background-position: center
+      background-size: cover
+      width: 100%
+      height: 100%
+      z-index: 2
+    &-big:after
+      content: ''
+      position: absolute
+      right: 30px
+      top: 65px
+      background-color: #D1E2EB
+      border-radius: 50%
+      height: 260px
+      width: 260px
+      z-index: 1
+    &-little
+      padding: 25px 25px 30px 25px
+      background-color: #fff
+      border-radius: 10px
+      overflow: hidden
+      text-decoration: none
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+    &__date
+      font-size: 12px
+      line-height: 15px
+      color: #939699
