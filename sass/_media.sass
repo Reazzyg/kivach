@@ -136,6 +136,24 @@
       &__icon
         width: 45px
         height: 45px
+  .news
+    &-card
+      &__wrapper
+        max-width: 300px
+
+  .career
+    &-card
+      &-big
+      &-little
+        padding: 20px 15px 25px
+      &__text
+        margin-bottom: 25px
+  .photoes
+    &__button
+      bottom: 15%
+    &__title
+      font-size: 35px
+      line-height: 40px
 @media (max-width: 992px)
   .container
     max-width: 760px
@@ -153,6 +171,101 @@
     &__item
       padding-right: 15px
       padding-left: 10px
+  .articles
+    &-wrapper
+      grid-template-columns: repeat(3, 1fr )
+      grid-template-rows: repeat(5, 175px )
+    &-work
+      grid-column: span 2
+      grid-row: span 2
+    &-portfolio
+      grid-column: 3/4
+      grid-row: span 2
+    &-download
+      grid-column: 1/2
+      grid-row: 5/6
+    &-instrument
+      grid-column: 1/2
+      grid-row: 3/5
+    &-references
+      grid-column: 2 / 3
+      grid-row: 3/4
+    &-clients
+      grid-column: 3/4
+      grid-row: 3/4
+    &-workplace
+      grid-column: 2/3
+      grid-row: 4/5
+    &-methods
+      grid-column: 3/4
+      grid-row: 4/5
+    &-tags
+      overflow: auto
+      grid-column: 2/3
+      grid-row: 5/6
+    &-social
+      grid-column: 3/4
+      grid-row: 5/6
+  .news
+    &-card
+      &__wrapper
+        max-width: 100%
+      &__image
+        height: 155px
+      &__tag
+        font-size: 10px
+      &__title
+        font-size: 14px
+        line-height: 18px
+      &__text
+        font-size: 12px
+        line-height: 16px
+  .recent
+    &-wrapper
+      padding-right: 10px
+      padding-left: 10px
+      &-left
+        padding-left: 15px
+        padding-right: 15px
+    &__title
+      font-size: 12px
+      line-height: 15px
+    &-card
+      &__title
+        font-size: 12px
+        line-height: 14px
+      &__date
+        font-size: 10px
+        line-height: 10px
+  .hot
+    &-wrapper
+      grid-template-columns: repeat(3, 1fr)
+      grid-template-rows: repeat(4,170px)
+    &-slider
+      &__image
+        width: 750px
+        height: 370px
+  .swiper
+    &-container
+      max-width: 978px
+      height: 370px
+  .photoes
+    grid-column: span 3
+    grid-row: span 2
+
+  .career
+    &-card
+      &-big
+        grid-column: 1/3
+        grid-row: 3/5
+  .footer
+    &-top
+      flex-wrap: wrap
+      justify-content: center
+    &-middle
+      &__item
+        margin-left: 20px
+
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -175,6 +288,8 @@
         margin: 0
         max-width: 100%
         padding-top: 30px
+        height: 100vh
+        overflow: auto
     &__ul
       flex-direction: column
     &__button
@@ -240,6 +355,8 @@
     &-tab
       overflow: auto
   .advice
+    &-wrapper
+      padding: 15px
     &__ul
       flex-wrap: wrap
     &__item
@@ -249,6 +366,131 @@
       border-bottom: 1px solid #4B5157
     &__item:last-child
       padding-right: 15px
+    &__item:nth-child(3)
+      border-bottom: none
+    &__item:nth-child(4)
+      border-bottom: none
+  .articles
+    &-wrapper
+      grid-template-columns: repeat(3, 1fr)
+      grid-template-rows: repeat(6, 170px)
+      grid-gap: 15px
+    &-work
+      grid-column: span 4
+      grid-row: span 2
+    &-portfolio
+      grid-column: 1/2
+      grid-row: 3/5
+      &__wrapper
+        top: 130px
+        left: 15px
+      &__text
+        font-size: 12px
+        line-height: 15px
+        margin-bottom: 20px
+      &__logo
+        margin: auto
+    &-author
+      position: relative
+      left: -5px
+    &-download
+
+      grid-column: 3/4
+      grid-row: 6/7
+    &-instrument
+      grid-column: 1/2
+      grid-row: 5/7
+      &__title
+        margin: 0
+        padding: 15px 20px
+        font-size: 13px
+        line-height: 18px
+    &-references
+      padding: 15px
+      grid-column: 2/3
+      grid-row: 3/4
+    &-clients
+      padding: 15px
+      grid-column: 3/4
+      grid-row: 3/4
+    &-workplace
+      padding: 15px
+      grid-column: 2/3
+      grid-row: 4/5
+    &-methods
+      padding: 15px
+      grid-column: 3/4
+      grid-row: 4/5
+    &-tags
+      grid-column: 2/4
+      grid-row: 5/6
+    &-social
+      padding: 0
+      padding-top: 30px
+      padding-bottom: 40px
+      grid-column: 2/3
+      grid-row: 6/7
+      &__title
+        font-size: 15px
+        line-height: 20px
+      &__icon
+        width: 40px
+        height: 40px
+        margin-right: 5px
+  .devider
+    &__title
+      font-size: 35px
+      line-height: 40px
+  .news
+    &-wrap
+      flex-direction: column
+    &-wrapper
+      &-left
+        margin: 0
+      &-right
+        order: -1
+        max-width: 850px
+        width: 100%
+        max-height: 340px
+        overflow: auto
+        margin-bottom: 20px
+  .hot
+    &-wrapper
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(5, 170px)
+  .photoes
+    grid-column: span 2
+    grid-row: span 2
+    &__title
+      top: 150px
+  .career
+    &-card
+      &-big
+        grid-column: span 2
+        grid-row: 3/5
+
+  .footer
+    &-top
+      &__ul
+        padding-top: 15px
+      &__list
+        margin-bottom: 10px
+    &-middle
+      flex-wrap: wrap
+      justify-content: center
+      &__item
+        margin-left: 10px
+      &__link
+        font-size: 13px
+      &__socials
+        display: flex
+      &__icon
+        width: 30px
+        height: 30px
+    &-bottom
+      flex-wrap: wrap
+      &__left
+        margin-bottom: 15px
 @media (max-width: 576px)
   .content
     &__area
@@ -271,3 +513,169 @@
       &__ul
         display: flex
         flex-direction: row
+  .advice
+    &__ul
+      flex-direction: column
+      align-items: center
+    &__item:nth-child(3)
+      border-bottom: 1px solid #4b5157
+  .articles
+    &-wrapper
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(7, 170px)
+    &-work
+      grid-column: span 2
+      grid-row: span 2
+      &__image
+        max-width: 140px
+    &-portfolio
+      grid-column: 1/2
+      grid-row: 3/5
+      &__wrapper
+        top: 130px
+        left: 15px
+      &__text
+        font-size: 12px
+        line-height: 15px
+        margin-bottom: 20px
+      &__logo
+        margin: auto
+    &-author
+      position: relative
+      left: -5px
+    &-download
+      grid-column: 1/2
+      grid-row: 8/9
+    &-instrument
+      grid-column: 2/3
+      grid-row: 3/5
+    &-references
+      padding: 15px
+      grid-column: 1/2
+      grid-row: 5/6
+    &-clients
+      padding: 15px
+      grid-column: 2/3
+      grid-row: 5/6
+    &-workplace
+      padding: 15px
+      grid-column: 1/2
+      grid-row: 6/7
+    &-methods
+      padding: 15px
+      grid-column: 1/2
+      grid-row: 7/8
+    &-tags
+      grid-column: 2/3
+      grid-row: 6/8
+    &-social
+      grid-column: 2/3
+      grid-row: 8/9
+  .devider
+    &__title
+      font-size: 30px
+      line-height: 35px
+  .news
+    &-card
+      flex-direction: column
+      padding-top: 20px
+      padding-bottom: 20px
+      &__image
+        height: 150px
+  .photoes
+    &__title
+      font-size: 23px
+      line-height: 25px
+  .subscribe
+    &__title
+      text-align: center
+    &-wrapper
+      display: flex
+      align-items: center
+      flex-direction: column
+    &__input
+      margin-bottom: 20px
+  .footer
+    &-middle
+      justify-content: space-between
+      &__wrapper
+        flex-direction: column
+      &__ul
+        flex-direction: column
+        align-items: flex-start
+      &__logo
+        transform: translateX(30%)
+@media ( max-width: 435px)
+  .articles
+    &-wrapper
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(7, 170px)
+    &-work
+      grid-column: 1
+      grid-row: span 2
+      &__image
+        display: none
+    &-portfolio
+      grid-column: 1
+      grid-row: span 2
+      &__wrapper
+        top: 130px
+        left: 15px
+      &__text
+        font-size: 12px
+        line-height: 15px
+        margin-bottom: 20px
+      &__logo
+        margin: auto
+    &-author
+      position: relative
+      left: -5px
+    &-download
+      grid-column: 1
+      grid-row: 5/6
+    &-instrument
+      grid-column: 1
+      grid-row: 6/8
+      &__image
+        width: 100%
+        max-height: 270px
+      &__title
+        text-align: center
+    &-references
+      padding: 15px
+      grid-column: 1
+      grid-row: 9/10
+    &-clients
+      padding: 15px
+      grid-column: 1
+      grid-row: 10/11
+    &-workplace
+      padding: 15px
+      grid-column: 1
+      grid-row: 11/12
+    &-methods
+      padding: 15px
+      grid-column: 1
+      grid-row: 12/13
+    &-tags
+      grid-column: 1
+      grid-row: 8/9
+    &-social
+      grid-column: 1
+      grid-row: 13/14
+  .devider
+    &__title
+      font-size: 25px
+      line-height: 30px
+  .career
+    &-card
+      &__text
+        max-width: 63%
+        margin-bottom: 10px
+  .subscribe
+    &__title
+      font-size: 35px
+      line-height: 45px
+    &__input
+      max-width: 313px
+      width: 100%

@@ -1,9 +1,5 @@
 .content
   padding-top: 30px
-  background-image: url('../img/background.png')
-  background-repeat: no-repeat
-  background-size: contain
-  background-size: 100% 475px
   &-wrapper
     display: flex
     justify-content: space-between
@@ -145,3 +141,12 @@
       font-size: 14px
       line-height: 20px
       color: #4B5157
+.content:before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: 575px
+  z-index: -100
+  background-color: #262D33

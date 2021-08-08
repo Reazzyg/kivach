@@ -4,11 +4,11 @@
   position: relative
   &-wrap
     display: flex
-    gap: 30px
+    align-items: flex-start
+    justify-content: space-between
   &-wrapper
     display: flex
     flex-direction: column
-
     &-left
       padding-left: 25px
       padding-right: 25px
@@ -16,23 +16,26 @@
       background-color: #fff
       overflow: hidden
       max-width: 850px
+      width: 100%
+      margin-right: 30px
     &-right
       padding-top: 20px
       max-width: 263px
       background-color: #fff
       border-radius: 10px
       overflow: hidden
-      max-height: 770px
   &-card
     padding-top: 25px
     padding-bottom: 25px
     position: relative
     display: flex
     align-items: center
+    justify-content: space-between
     gap: 25px
     border-bottom: 1px solid #D9DADB
     cursor: pointer
     background-color: #fff
+    text-decoration: none
     &__link
       text-decoration: none
     &__wrapper
@@ -40,11 +43,10 @@
       flex-direction: column
       justify-content: space-between
       max-width: 437px
-      height: 185px
-
     &__image
       width: 336px
       height: 195px
+      object-fit: cover
     &__bookmark
       position: absolute
       right: 0
@@ -54,9 +56,10 @@
     &__tag
       font-weight: 900
       font-size: 12px
-      line-height: 15p
+      line-height: 15px
       color: #4592FF
       text-transform: uppercase
+      margin-bottom: 15px
       &-purple
         color: #AC8EE3
       &-red
@@ -73,10 +76,12 @@
       line-height: 25px
       color: #262D33
       margin: 0
+      margin-bottom: 12px
     &__text
       font-size: 14px
       line-height: 20px
       color: #4B5157
+      margin-bottom: 18px
     &__info
       display: flex
       align-items: center
@@ -95,9 +100,17 @@
   &-card:last-child
     border-bottom: none
 .recent
+  &-wrapper
+    padding-left: 25px
+    padding-right: 25px
+  &__link
+    display: flex
+    justify-content: center
+    text-decoration: none
   &__title
     font-weight: 900
     font-size: 14px
+
     line-height: 20px
     color: #262D33
     text-align: center
@@ -108,7 +121,8 @@
   &-card
     display: flex
     align-items: center
-    padding: 17px 25px
+    padding-top: 17px
+    padding-bottom: 17px
     border-bottom: 1px solid #D9DADB
     cursor: pointer
     &__link
@@ -126,13 +140,14 @@
       font-size: 14px
       line-height: 20px
       color: #4B5157
+      font-weight: normal
       margin: 0
     &__date
       font-size: 12px
       line-height: 15px
       color: #939699
   &__button
-    padding: 11px 98px
+    padding: 11px
     background-color: #fff
     text-align: center
     border: none
@@ -141,3 +156,22 @@
     font-size: 14px
     line-height: 20px
     color: #262D33
+.recent
+  &-card
+
+    counter-increment: card
+    position: relative
+  &-card:before
+    content: ''
+    position: absolute
+    right: 0
+    height: 50px
+    font-family: Lato
+    font-size: 70px
+    font-style: italic
+    font-weight: 900
+    line-height: 50px
+    opacity: 0.08
+    color: #262D33
+  &-card:nth-child(n+1)::before
+    content: counter(card)
