@@ -47,6 +47,59 @@ $(document).ready(function () {
       modalDialog.removeClass('modal__dialog--visible');
     }
   });
+  $('.modal__input-phone').mask('+7 (000) 000-00-00');
+  $('.footer__input-phone').mask('+7 (000) 000-00-00');
+  //Обработка форм валидации
+  $.validator.methods.email = function (value, element) {
+    return this.optional(element) || /[a-z]+@[a-z]+\.[a-z]+/.test(value);
+  };
+  jQuery.validator.addMethod(
+    'lettersonly',
+    function (value, element) {
+      return this.optional(element) || /^[a-zA-Zа-яА-ЯёЁ]+$/i.test(value);
+    },
+    'Letters and spaces only please'
+  );
+  $('.form').each(function () {
+    $(this).validate({
+      errorClass: 'invalid',
+      rules: {
+        messageName: {
+          required: true,
+          lettersonly: true,
+        },
+        name: {
+          required: true,
+          lettersonly: true,
+        },
+      },
+      messages: {
+        messageName: {
+          required: 'Please specify your name',
+          minlength: 'Name must be at least 2 symbols',
+          lettersonly: 'No digits are allowed in this field',
+        },
+        name: {
+          required: 'Please specify your name',
+          lettersonly: 'No digits are allowed in this field',
+        },
+        phone: {
+          required: 'Please specify your phone number',
+        },
+        messageEmail: {
+          required: 'We need your email address to contact you',
+          email: 'Your email address must be in the format of name@domain.com',
+        },
+        messagePhone: {
+          required: 'Please specify your phone number',
+        },
+        newsletter: {
+          required: 'We need your email address to contact you',
+          email: 'Your email address must be in the format of name@domain.com',
+        },
+      },
+    });
+  });
   const hotSlider = new Swiper('.swiper-container', {
     // Optional parameters
     direction: 'horizontal',

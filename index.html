@@ -18,7 +18,7 @@
       <div class="container">
         <div class="navbar">
           <div class="navbar__wrapper">
-            <a href="" class="link"
+            <a href="../universal/" class="link"
               ><img src="img/logo.svg" alt="logo" class="navbar__logo"
             /></a>
             <div class="navbar__fixed">
@@ -46,7 +46,7 @@
                 </li>
               </ul>
               <!-- /.navbar__ul -->
-              <button class="navbar__button">оставить заявку</button>
+              <button data-toggle="modal" class="navbar__button">оставить заявку</button>
             </div>
             <!-- /.navbar-fixed -->
             <button class="menu-button navbar__menu-button">
@@ -744,7 +744,7 @@
         <!-- /.footer-top -->
         <div class="footer-middle">
           <div class="footer-middle__wrapper">
-          <a href=""> <img src="img/footer-logo.svg" alt="" class="footer-middle__logo"></a>
+          <a href="../universal/"> <img src="img/footer-logo.svg" alt="" class="footer-middle__logo"></a>
           <ul class="footer-middle__ul">
             <li class="footer-middle__item"><a href="" class="footer-middle__link">Контакты</a></li>
             <li class="footer-middle__item"><a href="" class="footer-middle__link">Работа у нас</a></li>
@@ -770,7 +770,54 @@
       <!-- /.container -->
     </footer>
     <!-- /.footer -->
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <a href=" " class="modal__close">
+          <img src="img/close.svg" alt="Icon: close"
+        /></a>
+        <h3 class="modal__title">Напишите нам</h3>
+        <form action="send.php" method="POST" class="modal__form form">
+          <input
+            type="text"
+            class="input modal__input"
+            required
+            placeholder="Your Full Name*"
+            name="messageName"
+            minlength="2"
+          />
+          <input
+            type="tel"
+            class="input modal__input-phone"
+            required
+            placeholder="Phone Number*"
+            name="messagePhone"
+          />
+          <input
+            type="email"
+            class="input modal__input"
+            required
+            placeholder="Email*"
+            name="messageEmail"
+          />
+          <textarea
+            class="message modal__message"
+            placeholder="Message"
+            name="messageText"
+            cols="1"
+            rows="10"
+          ></textarea>
+          <button class="button modal__button" type="submit">Send</button>
+          <span class="modal__info">* Required Fields</span>
+        </form>
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>

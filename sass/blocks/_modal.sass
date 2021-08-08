@@ -1,0 +1,98 @@
+.modal
+  &__overlay
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(48, 53, 56, 0.39)
+    z-index: 100
+    visibility: hidden
+    opacity: 0
+    transition: 0.2s
+    &--visible
+      visibility: visible
+      opacity: 1
+  &__dialog
+    position: fixed
+    top: 50%
+    left: 50%
+    padding: 33px 88px
+    background-color: #fff
+    transform: translate(-50%, -50%)
+    border-radius: 8px
+    color: #4B5157
+    z-index: 101
+    max-width: 478px
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.2s
+    overflow: auto
+    max-height: 100vh
+    &--visible
+      visibility: visible
+      opacity: 1
+  &__close
+    position: absolute
+    right: 18px
+    top: 17px
+    text-decoration: none
+    cursor: pointer
+  &__title
+    text-transform: uppercase
+    margin-bottom: 15px
+
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    text-align: center
+  &__form
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+  &__input
+    width: 100%
+    margin-top: 15px
+    outline: none
+    border: 1px solid #D9DADB
+    padding: 10px
+    border-radius: 3px
+    &-phone
+      padding: 10px
+      width: 100%
+      margin-top: 15px
+      outline: none
+      border: 1px solid #D9DADB
+      border-radius: 3px
+  &__message
+    width: 100%
+    min-height: 123px
+    margin-top: 15px
+    outline: none
+    border: 1px solid #D9DADB
+    border-radius: 3px
+    resize: none
+  &__button
+    margin-top: 15px
+    padding: 9px 64px
+
+    max-height: 39px
+    background-color: #656B70
+    border: none
+    border-radius: 10px
+    color: #fff
+    text-transform: uppercase
+    font-family: 'Lato'
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 20px
+    cursor: pointer
+  &__info
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: #E0E0E0
