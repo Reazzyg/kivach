@@ -47,6 +47,25 @@ $(document).ready(function () {
       modalDialog.removeClass('modal__dialog--visible');
     }
   });
+  $(document).click(function (event) {
+    if (
+      !$(event.target).closest('.modal__dialog, [data-toggle=modal]').length
+    ) {
+      var modalOverlay = $('.modal__overlay');
+      var modalDialog = $('.modal__dialog');
+      modalOverlay.removeClass('modal__overlay--visible');
+      modalDialog.removeClass('modal__dialog--visible');
+    }
+  });
+  var bookMarkArticle = $('.main-news__path');
+  bookMarkArticle.on('click', function () {
+    $(this).toggleClass('main-news__path-active');
+  });
+  var bookMarkNews = $('.news-card__path');
+  bookMarkNews.on('click', function () {
+    $(this).toggleClass('news-card__path-active');
+  });
+
   $('.modal__input-phone').mask('+7 (000) 000-00-00');
   $('.footer__input-phone').mask('+7 (000) 000-00-00');
   //Обработка форм валидации
@@ -113,5 +132,32 @@ $(document).ready(function () {
       el: '.swiper-pagination',
       clickable: true,
     },
+  });
+  const articleSlider = new Swiper('.hero-article__swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    // autoplay: {
+    //  delay: 5000,
+    //  },
+    navigation: {
+      nextEl: '.hero-article__button-next',
+      prevEl: '.hero-article__button-prev',
+    },
+
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+  });
+  $(function () {
+    $('.comments__item').slice(0, 4).show();
+    $('#loadMore').on('click', function (e) {
+      e.preventDefault();
+      $('.comments__item:hidden').slice(0, 4).slideDown();
+      if ($('.comments__item:hidden').length == 0) {
+        $('#loadMore').attr('disabled', !0);
+      }
+    });
   });
 });

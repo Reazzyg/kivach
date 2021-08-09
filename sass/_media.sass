@@ -304,7 +304,7 @@
       height: 16px
       padding: 0
       border: none
-      background-color: $grey
+      background-color: #fff
       cursor: pointer
       &__line
         position: absolute
@@ -312,6 +312,8 @@
         width: 16px
         height: 1px
         background-color: #fff
+        &-secondary
+          background-color: $grey
       &__line::before
         content: ''
         position: absolute
@@ -320,6 +322,9 @@
         height: 1px
         background-color: #fff
         transform: translateY(6px)
+      &__line
+        &-secondary::before
+          background-color: $grey
       &__line::after
         content: ''
         position: absolute
@@ -328,6 +333,9 @@
         height: 1px
         background-color: #fff
         transform: translateY(-6px)
+      &__line
+        &-secondary::after
+          background-color: $grey
       &__line-active
         height: 0
       &__line-active::before
