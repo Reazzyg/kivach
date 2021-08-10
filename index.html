@@ -16,7 +16,7 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="navbar">
+        <div id="navbar" class="navbar">
           <div class="navbar__wrapper">
             <a href="../universal/" class="link"
               ><img src="img/logo.svg" alt="logo" class="navbar__logo"
@@ -24,25 +24,25 @@
             <div class="navbar__fixed">
               <ul class="navbar__ul">
                 <li class="navbar__item">
-                  <a href="#" class="navbar__link">Статьи</a>
+                  <a href="#articles" class="navbar__link">Статьи</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="#" class="navbar__link">Новости</a>
+                  <a href="#news" class="navbar__link">Новости</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="#" class="navbar__link">Горячее</a>
+                  <a href="#hot" class="navbar__link">Горячее</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="#" class="navbar__link">HTML</a>
+                  <a href="#footer" class="navbar__link">HTML</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="#" class="navbar__link">CSS</a>
+                  <a href="#footer" class="navbar__link">CSS</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="#" class="navbar__link">JavaScript</a>
+                  <a href="#footer" class="navbar__link">JavaScript</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="#" class="navbar__link">Web Design</a>
+                  <a href="#footer" class="navbar__link">Web Design</a>
                 </li>
               </ul>
               <!-- /.navbar__ul -->
@@ -82,14 +82,14 @@
               <h2 class="content-text__title">
                 Расширение Chrome защищает от атак
               </h2>
-              <button class="button content-text__button">
+              <a href="article.html" class="button content-text__button">
                 Читать далее
                 <img
                   src="img/Arrow.svg"
                   alt="Icon: Arrow"
                   class="content__arrow"
                 />
-              </button>
+              </a>
             </div>
           </div>
           <div id="second" class="content__area">
@@ -281,7 +281,7 @@
       <!-- /.container -->
     </div>
     <!-- /.advice -->
-    <section class="articles">
+    <section id="articles" class="articles">
       <div class="container">
         <div class="articles-wrapper">
           <div class="articles-work">
@@ -357,14 +357,18 @@
               Чек-лист сдачи верстки вашему заказчику
             </h3>
             <span class="articles-download__info">PDF, 125 Мб</span>
-            <button class="articles-download__button">
+            <a
+              class="articles-download__button"
+              href="img/advice-1.png"
+              download
+            >
               <img
                 src="img/download.svg"
                 alt="download Icon"
                 class="articles-download__image"
               />
               Скачать
-            </button>
+            </a>
           </div>
 
           <!-- /.aricles-download -->
@@ -482,7 +486,7 @@
       </div>
     </section>
     <!-- /.devider -->
-    <section class="news">
+    <section id="news" class="news">
       <div class="container">
         <div class="news-wrap">
           <div class="news-wrapper news-wrapper-left">
@@ -901,7 +905,7 @@
       <!-- /.container -->
     </section>
     <!-- /.news -->
-    <section class="hot">
+    <section id="hot" class="hot">
       <div class="container">
         <div class="hot-wrapper">
           <!-- Slider main container -->
@@ -1012,13 +1016,27 @@
       <!-- /.container -->
     </section>
     <!-- /.hot -->
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div class="container">
         <div class="subscribe">
           <h2 class="subscribe__title">Подпишитесь на нашу рассылку</h2>
           <div class="subscribe-wrapper">
-            <input type="email" class="subscribe__input" placeholder="Email" />
-            <button type="submit" class="subscribe__button">Подписаться</button>
+            <form
+              action="send.php"
+              method="POST"
+              class="footer__subscribe form"
+            >
+              <input
+                type="email"
+                name="footerEmail"
+                class="subscribe__input"
+                placeholder="Email"
+              />
+
+              <button type="submit" class="subscribe__button">
+                Подписаться
+              </button>
+            </form>
           </div>
         </div>
         <div class="footer-top">
@@ -1145,21 +1163,23 @@
                 <a href="" class="footer-middle__link">Реклама</a>
               </li>
               <li class="footer-middle__item">
-                <a href="" class="footer-middle__link">Обратная связь</a>
+                <a data-toggle="modal" class="footer-middle__link"
+                  >Обратная связь</a
+                >
               </li>
             </ul>
           </div>
           <div class="footer-middle__socials">
-            <a href="" class="footer-middle__ref">
+            <a href="facebook.com" class="footer-middle__ref">
               <img src="img/fb-f.svg" alt="" class="footer-middle__icon" />
             </a>
-            <a href="" class="footer-middle__ref">
+            <a href="twitter.com" class="footer-middle__ref">
               <img src="img/twit.svg" alt="" class="footer-middle__icon" />
             </a>
-            <a href="" class="footer-middle__ref">
+            <a href="youtube.com" class="footer-middle__ref">
               <img src="img/yt-f.svg" alt="" class="footer-middle__icon" />
             </a>
-            <a href="" class="footer-middle__ref">
+            <a href="instagram.com" class="footer-middle__ref">
               <img src="img/inst.svg" alt="" class="footer-middle__icon" />
             </a>
           </div>
@@ -1175,7 +1195,6 @@
           <span class="footer-bottom__right">© 2020 Universal Magazine</span>
         </div>
         <!-- /.footer-bottom -->
-        >
       </div>
       <!-- /.container -->
     </footer>
@@ -1187,39 +1206,57 @@
         <a href=" " class="modal__close">
           <img src="img/close.svg" alt="Icon: close"
         /></a>
-        <h3 class="modal__title">Напишите нам</h3>
+        <h3 class="modal__title">Обратная связь</h3>
+
         <form action="send.php" method="POST" class="modal__form form">
-          <input
-            type="text"
-            class="input modal__input"
-            required
-            placeholder="Your Full Name*"
-            name="messageName"
-            minlength="2"
-          />
-          <input
-            type="tel"
-            class="input modal__input-phone"
-            required
-            placeholder="Phone Number*"
-            name="messagePhone"
-          />
-          <input
-            type="email"
-            class="input modal__input"
-            required
-            placeholder="Email*"
-            name="messageEmail"
-          />
-          <textarea
-            class="message modal__message"
-            placeholder="Message"
-            name="messageText"
-            cols="1"
-            rows="10"
-          ></textarea>
-          <button class="button modal__button" type="submit">Send</button>
-          <span class="modal__info">* Required Fields</span>
+          <div class="modal__form-item">
+            <span class="modal__text">Тема</span>
+            <select required name="theme" class="modal__select">
+              <option class="modal__select-item" value="none" hidden>
+                Выберите тему
+              </option>
+              <option class="modal__select-item" value="HTML">HTML</option>
+              <option class="modal__select-item" value="CSS">CSS</option>
+              <option class="modal__select-item" value="JavaScript">
+                JavaScript
+              </option>
+            </select>
+          </div>
+          <div class="modal__form-item">
+            <span class="modal__text">Сообщение</span>
+            <textarea
+              required
+              class="message modal__message"
+              placeholder="Message"
+              name="messageText"
+              cols="1"
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="modal__form-item">
+            <span class="modal__text">Email</span>
+            <input
+              type="email"
+              class="input modal__input"
+              required
+              placeholder="Email*"
+              name="messageEmail"
+            />
+          </div>
+          <div class="modal__form-item checkbox">
+            <input
+              type="checkbox"
+              id="checkbox"
+              value="Согласен с обработкой данных"
+              name="checkbox"
+              required
+              class="modal__checkbox"
+            />
+            <span class="modal__checkbox-text"
+              >Согласен с обработкой данных</span
+            >
+          </div>
+          <button class="button modal__button" type="submit">Отправить</button>
         </form>
       </div>
       <!-- /.modal__dialog -->

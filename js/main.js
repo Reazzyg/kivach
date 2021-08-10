@@ -65,6 +65,12 @@ $(document).ready(function () {
   bookMarkNews.on('click', function () {
     $(this).toggleClass('news-card__path-active');
   });
+  $('#navbar').on('click', 'a', function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').animate({ scrollTop: top }, 500);
+  });
 
   $('.modal__input-phone').mask('+7 (000) 000-00-00');
   $('.footer__input-phone').mask('+7 (000) 000-00-00');
@@ -93,39 +99,31 @@ $(document).ready(function () {
         },
       },
       messages: {
-        messageName: {
-          required: 'Please specify your name',
-          minlength: 'Name must be at least 2 symbols',
-          lettersonly: 'No digits are allowed in this field',
-        },
-        name: {
-          required: 'Please specify your name',
-          lettersonly: 'No digits are allowed in this field',
-        },
-        phone: {
-          required: 'Please specify your phone number',
+        theme: {
+          required: 'Пожалуйста, выберите тему',
         },
         messageEmail: {
-          required: 'We need your email address to contact you',
-          email: 'Your email address must be in the format of name@domain.com',
+          required: 'Введите ваш Email',
+          email: 'Email должен быть в формате name@domain.com',
         },
-        messagePhone: {
-          required: 'Please specify your phone number',
+
+        messageText: {
+          required: 'Это поле обязательно для заполнения',
         },
-        newsletter: {
-          required: 'We need your email address to contact you',
-          email: 'Your email address must be in the format of name@domain.com',
+        checkbox: {
+          required: 'Подтвердите согласие',
         },
       },
     });
   });
+
   const hotSlider = new Swiper('.swiper-container', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    // autoplay: {
-    //  delay: 5000,
-    //  },
+    autoplay: {
+      delay: 5000,
+    },
 
     // If we need pagination
     pagination: {
