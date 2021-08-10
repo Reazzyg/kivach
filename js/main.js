@@ -98,9 +98,14 @@ $(document).ready(function () {
           lettersonly: true,
         },
       },
+
       messages: {
         theme: {
           required: 'Пожалуйста, выберите тему',
+        },
+        footerEmail: {
+          required: 'Введите ваш Email',
+          email: 'Email должен быть в формате name@domain.com',
         },
         messageEmail: {
           required: 'Введите ваш Email',

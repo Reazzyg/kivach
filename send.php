@@ -26,13 +26,13 @@ try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-    //$mail->SMTPDebug = 3;
+    $mail->SMTPDebug = 3;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
     $mail->Host       = 'ssl://mail.hosting.reg.ru'; // SMTP сервера вашей почты
     $mail->Username   = 'mudroff@mudroff.site'; // Логин на почте
-    $mail->Password   = 'qwert321'; // Пароль на почте
+    $mail->Password   = 'qD7vN0nG6asE4r'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('mudroff@mudroff.site', 'Семен Александрович'); // Адрес самой почты и имя отправителя
@@ -57,12 +57,13 @@ else {$result = "error";}
 }
 
 // Отображение результата
+//echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
 header('location: thankyou.html');
             }
-            else if  (isset($_POST['comment'])) {
+            else if  (isset($_POST['Comment'])) {
                 // Переменные, которые отправляет пользователь
 
-$message = $_POST['comment'];
+$message = $_POST['Comment'];
 
 
 // Формирование самого письма
@@ -79,13 +80,13 @@ try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-    //$mail->SMTPDebug = 3;
+    $mail->SMTPDebug = 3;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
     $mail->Host       = 'ssl://mail.hosting.reg.ru'; // SMTP сервера вашей почты
     $mail->Username   = 'mudroff@mudroff.site'; // Логин на почте
-    $mail->Password   = 'qwert321'; // Пароль на почте
+    $mail->Password   = 'qD7vN0nG6asE4r'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('mudroff@mudroff.site', 'Семен Александрович'); // Адрес самой почты и имя отправителя
@@ -132,13 +133,13 @@ try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-    //$mail->SMTPDebug = 3;
+    $mail->SMTPDebug = 3;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
     $mail->Host       = 'ssl://mail.hosting.reg.ru'; // SMTP сервера вашей почты
     $mail->Username   = 'mudroff@mudroff.site'; // Логин на почте
-    $mail->Password   = 'qwert321'; // Пароль на почте
+    $mail->Password   = 'qD7vN0nG6asE4r'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('mudroff@mudroff.site', 'Семен Александрович'); // Адрес самой почты и имя отправителя
