@@ -591,6 +591,10 @@ body {
   cursor: pointer;
 }
 
+.articles-instrument__image {
+  object-fit: cover;
+}
+
 .articles-instrument__title {
   margin-left: 25px;
   font-family: Roboto Slab;
@@ -2590,8 +2594,20 @@ body {
 }
 
 @media (min-width: 992px) {
+  .navbar__link:hover {
+    text-decoration: underline;
+    transition: 0.5s all;
+  }
+  .navbar__button:hover {
+    background-color: #35383a;
+    transition: 0.5s all;
+  }
   .content-tab__item:hover {
     background-color: #F5F5F5;
+  }
+  .content-text__button:hover {
+    background-color: #005cde;
+    transition: 0.5s all;
   }
   .advice__item:hover {
     transform: translateY(-15px);
@@ -2625,6 +2641,9 @@ body {
     transform: translate(-5px, -5px);
     transition: 0.5s;
   }
+  .articles-download__button:hover {
+    text-decoration: underline;
+  }
   .articles-tags__button:hover {
     background-color: #cccccc;
   }
@@ -2632,17 +2651,87 @@ body {
     transform: translateY(-15px);
     transition: 0.3s;
   }
+  .devider__button:hover {
+    background-color: #005cde;
+    transition: 0.5s all;
+  }
   .news-card:hover {
     background-color: #fafafa;
+    transition: 0.5s all;
   }
   .recent-card:hover {
     background-color: #fafafa;
+    transition: 0.5s all;
   }
   .recent__button:hover {
     background-color: #fafafa;
+    transition: 0.5s all;
+  }
+  .recent__link:hover {
+    background-color: #fafafa;
+    transition: 0.5s all;
   }
   .swiper-container__button:hover {
     background-color: #005cde;
+    transition: 0.5s all;
+  }
+  .photoes__button:hover {
+    background-color: #005cde;
+    transition: 0.5s all;
+  }
+  .career-card-little:hover {
+    background-color: #e6e6e6;
+    transition: 0.5s all;
+  }
+  .career-card__button:hover {
+    background-color: #005cde;
+    transition: 0.5s all;
+  }
+  .subscribe__button:hover {
+    background-color: #005cde;
+    transition: 0.5s all;
+  }
+  .footer-top__link:hover {
+    text-decoration: underline;
+  }
+  .footer-middle__link:hover {
+    text-decoration: underline;
+  }
+  .footer-middle__icon:hover {
+    transform: translateY(-15px);
+    transition: 0.5s all;
+  }
+  .main-news__link:hover {
+    text-decoration: underline;
+  }
+  .hero-article__user-link:hover {
+    text-decoration: underline;
+  }
+  .hero-article__theme-link:hover {
+    text-decoration: underline;
+  }
+  .hero-article__tags-link:hover {
+    background-color: #e6e6e6;
+    transition: 0.5s all;
+  }
+  .hero-article__repost-link:hover {
+    transform: translateY(-15px);
+    transition: 0.5s all;
+  }
+  .addition-card__link:hover {
+    text-decoration: underline;
+  }
+  .comments-add:hover {
+    background-color: #e6e6e6;
+    transition: 0.5s all;
+  }
+  .comments__load:hover {
+    background-color: #e6e6e6;
+    transition: 0.5s all;
+  }
+  .comments-form__button:hover {
+    background-color: #005cde;
+    transition: 0.5s all;
   }
 }
 
@@ -2918,7 +3007,10 @@ body {
   }
   .footer-top {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+  }
+  .footer-top__ul:last-child {
+    width: 195px;
   }
   .footer-middle__item {
     margin-left: 20px;
