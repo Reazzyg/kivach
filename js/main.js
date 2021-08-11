@@ -20,30 +20,43 @@ $(document).ready(function () {
       .querySelector('.menu-button__line')
       .classList.toggle('menu-button__line-active');
   });
-
+  $(document).scroll(function () {
+    $('.navbar__fixed').removeClass('navbar__fixed-visible');
+  });
+  var toTop = $('.to-top');
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 200) {
+      toTop.addClass('to-top--visible');
+    } else {
+      toTop.removeClass('to-top--visible');
+    }
+  });
+  $('.to-top').click(function () {
+    $('body,html').animate({ scrollTop: 0 }, 400);
+  });
   var modalButton = $('[data-toggle="modal"]');
   var closeModalButton = $('.modal__close');
   modalButton.on('click', openModal);
   closeModalButton.on('click', closeModal);
   function openModal() {
-    var modalOverlay = $('.modal__overlay');
+    var modalOverlay = $('.modal');
     var modalDialog = $('.modal__dialog');
-    modalOverlay.addClass('modal__overlay--visible');
+    modalOverlay.addClass('modal--visible');
     modalDialog.addClass('modal__dialog--visible');
   }
 
   function closeModal(event) {
     event.preventDefault();
-    var modalOverlay = $('.modal__overlay');
+    var modalOverlay = $('.modal');
     var modalDialog = $('.modal__dialog');
-    modalOverlay.removeClass('modal__overlay--visible');
+    modalOverlay.removeClass('modal--visible');
     modalDialog.removeClass('modal__dialog--visible');
   }
   $(document).on('keydown', function (e) {
     if (e.keyCode == 27) {
-      var modalOverlay = $('.modal__overlay');
+      var modalOverlay = $('.modal');
       var modalDialog = $('.modal__dialog');
-      modalOverlay.removeClass('modal__overlay--visible');
+      modalOverlay.removeClass('modal--visible');
       modalDialog.removeClass('modal__dialog--visible');
     }
   });
@@ -51,12 +64,13 @@ $(document).ready(function () {
     if (
       !$(event.target).closest('.modal__dialog, [data-toggle=modal]').length
     ) {
-      var modalOverlay = $('.modal__overlay');
+      var modalOverlay = $('.modal');
       var modalDialog = $('.modal__dialog');
-      modalOverlay.removeClass('modal__overlay--visible');
+      modalOverlay.removeClass('modal--visible');
       modalDialog.removeClass('modal__dialog--visible');
     }
   });
+
   var bookMarkArticle = $('.main-news__path');
   bookMarkArticle.on('click', function () {
     $(this).toggleClass('main-news__path-active');
@@ -69,6 +83,7 @@ $(document).ready(function () {
     event.preventDefault();
     var id = $(this).attr('href'),
       top = $(id).offset().top;
+
     $('body,html').animate({ scrollTop: top }, 500);
   });
 
@@ -103,20 +118,25 @@ $(document).ready(function () {
         theme: {
           required: 'Пожалуйста, выберите тему',
         },
-        footerEmail: {
-          required: 'Введите ваш Email',
-          email: 'Email должен быть в формате name@domain.com',
-        },
+
         messageEmail: {
           required: 'Введите ваш Email',
-          email: 'Email должен быть в формате name@domain.com',
+          email: 'Формат Email name@domain.com',
         },
 
         messageText: {
-          required: 'Это поле обязательно для заполнения',
+          required: 'Введите сообщение',
         },
         checkbox: {
           required: 'Подтвердите согласие',
+        },
+        Comment: {
+          required: 'Это поле обязательно для заполнения',
+          minlength: 'Минимум 100 символов',
+        },
+        subscribe: {
+          required: 'Введите ваш Email',
+          email: 'Email должен быть в формате name@domain.com',
         },
       },
     });

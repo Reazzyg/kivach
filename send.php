@@ -113,10 +113,10 @@ else {$result = "error";}
 // Отображение результата
 header('location: thankyou.html');
             }
-            else if  (isset($_POST['footerEmail'])) {
+            else if  (isset($_POST['subscribe'])) {
                 // Переменные, которые отправляет пользователь
 
-$email = $_POST['footerEmail'];
+$email = $_POST['subscribe'];
 
 
 // Формирование самого письма

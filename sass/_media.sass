@@ -435,16 +435,22 @@
   .container
     max-width: 576px
     width: 92%
+  .header
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    z-index: 999
   .navbar
     &__fixed
       display: none
       &-visible
         background-color: $grey
-        position: absolute
+        position: fixed
         right: 0
         left: 0
         bottom: 0
-        top: 58px
+        top: 50px
         z-index: 999
         display: flex
         justify-content: flex-start
@@ -453,7 +459,7 @@
         margin: 0
         max-width: 100%
         padding-top: 30px
-        height: 100vh
+        max-height: 100vh
         overflow: auto
     &__ul
       flex-direction: column
@@ -514,6 +520,7 @@
         transform: rotate(-45deg)
         transition: 0.2s
   .content
+    padding-top: 60px
     &__avatar
       left: 40px
     &__name
@@ -1114,3 +1121,6 @@
         margin-right: 12px
       &__input
         min-height: 100px
+  .modal
+    &__dialog
+      width: 90%
