@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Universal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
@@ -46,8 +58,9 @@
                 </li>
               </ul>
               <!-- /.navbar__ul -->
-              <button data-toggle="modal" class="navbar__button">
-                оставить заявку
+              <button data-toggle="modal" class="navbar__button">войти</button>
+              <button class="navbar__button navbar__button-small">
+                сменить шрифт
               </button>
             </div>
             <!-- /.navbar-fixed -->
@@ -351,22 +364,25 @@
         <div class="articles-wrapper">
           <div class="articles-work">
             <div class="articles-work__wrapper">
-              <span class="articles-work__span">Статьи</span>
-              <h2 class="articles-work__title">
-                Вам предложили работу мечты, но вы не можете...
-              </h2>
-              <p class="articles-work__text">
-                Как поступить, если хочется пойти на работу мечты, но она
-                находится в другом городе. У вас семья и переезжать вы не
-                готовы.
-              </p>
+              <div class="articles-work__info">
+                <span class="articles-work__span">Статьи</span>
+                <h2 class="articles-work__title">
+                  Вам предложили работу мечты, но вы не можете...
+                </h2>
+                <p class="articles-work__text">
+                  Как поступить, если хочется пойти на работу мечты, но она
+                  находится в другом городе. У вас семья и переезжать вы не
+                  готовы.
+                </p>
+              </div>
+              <img
+                loading="lazy"
+                src="img/car.jpg"
+                alt="car Image"
+                class="articles-work__image"
+              />
             </div>
-            <img
-              loading="lazy"
-              src="img/car.jpg"
-              alt="car Image"
-              class="articles-work__image"
-            />
+
             <div class="articles-comment">
               <img
                 loading="lazy"
@@ -386,6 +402,7 @@
                 class="articles-comment__image"
               />
             </div>
+
             <!-- /.articles-comment-->
           </div>
           <!-- /.articles-card-->
@@ -1131,7 +1148,7 @@
               Каверзные и не очень вопросы, которых боятся новички, когда идут
               на собеседование
             </p>
-            <a href="#" class="career-card__button">
+            <a href="../universal/article.html" class="career-card__button">
               Читать далее
               <img
                 loading="lazy"
@@ -1365,13 +1382,11 @@
       <div class="modal__overlay"></div>
       <!-- /.modal__overlay -->
       <div class="modal__dialog">
-        <a href=" " class="modal__close">
-          <img src="img/close.svg" alt="Icon: close"
-        /></a>
-        <h3 class="modal__title">Обратная связь</h3>
+        <a href=" " class="modal__close"> </a>
+        <h3 class="modal__title">Введите данные</h3>
 
-        <form action="send.php" method="POST" class="modal__form form">
-          <div class="modal__form-item">
+        <form class="modal__form form">
+          <!-- <div class="modal__form-item">
             <span class="modal__text">Тема</span>
             <select required name="theme" class="modal__select">
               <option class="modal__select-item" value="none" hidden>
@@ -1383,7 +1398,7 @@
                 JavaScript
               </option>
             </select>
-          </div>
+          </div> 
           <div class="modal__form-item">
             <span class="modal__text">Сообщение</span>
             <textarea
@@ -1394,18 +1409,30 @@
               cols="1"
               rows="10"
             ></textarea>
-          </div>
+          </div>-->
           <div class="modal__form-item">
-            <span class="modal__text">Email</span>
+            <span class="modal__text">Логин</span>
             <input
-              type="email"
+              id="firstInput"
+              type="text"
               class="input modal__input"
               required
-              placeholder="Email*"
-              name="messageEmail"
+              placeholder="Логин*"
+              name="messageLogin"
             />
           </div>
-          <div class="modal__form-item checkbox">
+          <div class="modal__form-item">
+            <span class="modal__text">Пароль</span>
+            <input
+              id="secondInput"
+              type="text"
+              class="input modal__input"
+              required
+              placeholder="Пароль*"
+              name="messagePass"
+            />
+          </div>
+          <!-- <div class="modal__form-item checkbox">
             <input
               type="checkbox"
               id="checkbox"
@@ -1417,9 +1444,19 @@
             <span class="modal__checkbox-text"
               >Согласен с обработкой данных</span
             >
-          </div>
-          <button class="button modal__button" type="submit">Отправить</button>
+          </div> -->
+          <button class="button modal__button" type="submit">войти</button>
         </form>
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+    <div class="thanks">
+      <div class="thanks__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="thanks__dialog">
+        <a href=" " class="thanks__close"> </a>
+        <h3 class="thanks__title">Вход выполнен успешно</h3>
       </div>
       <!-- /.modal__dialog -->
     </div>

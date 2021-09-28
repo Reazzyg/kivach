@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  //подключение табов
   var tabItem = $('.content-tab__item');
   var contentItem = $('.content__area');
 
@@ -9,6 +10,7 @@ $(document).ready(function () {
     $(activeContent).addClass('content__area-active');
     $(this).addClass('content-tab__item-active');
   });
+  //подключение мобильной кнопки меню
   var menuButton = document.querySelector('.menu-button');
   menuButton.addEventListener('click', function () {
     document
@@ -70,7 +72,31 @@ $(document).ready(function () {
       modalDialog.removeClass('modal__dialog--visible');
     }
   });
-
+  function closeThanks(event) {
+    event.preventDefault();
+    var thanksOverlay = $('.thanks');
+    var thanksDialog = $('.thanks__dialog');
+    thanksOverlay.removeClass('thanks--visible');
+    thanksDialog.removeClass('thanks__dialog--visible');
+  }
+  $(document).on('keydown', function (e) {
+    if (e.keyCode == 27) {
+      var thanksOverlay = $('.thanks');
+      var thanksDialog = $('.thanks__dialog');
+      thanksOverlay.removeClass('thanks--visible');
+      thanksDialog.removeClass('thanks__dialog--visible');
+    }
+  });
+  $(document).click(function (event) {
+    if (
+      !$(event.target).closest('.modal__dialog, [data-toggle=modal]').length
+    ) {
+      var thanksOverlay = $('.thanks');
+      var thanksDialog = $('.thanks__dialog');
+      thanksOverlay.removeClass('thanks--visible');
+      thanksDialog.removeClass('thanks__dialog--visible');
+    }
+  });
   var bookMarkArticle = $('.main-news__path');
   bookMarkArticle.on('click', function () {
     $(this).toggleClass('main-news__path-active');
@@ -80,6 +106,13 @@ $(document).ready(function () {
     $(this).toggleClass('news-card__path-active');
   });
   $('#navbar').on('click', 'a', function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+      top = $(id).offset().top;
+
+    $('body,html').animate({ scrollTop: top }, 500);
+  });
+  $('#comments').on('click', 'a', function (event) {
     event.preventDefault();
     var id = $(this).attr('href'),
       top = $(id).offset().top;
@@ -96,11 +129,18 @@ $(document).ready(function () {
   jQuery.validator.addMethod(
     'lettersonly',
     function (value, element) {
-      return this.optional(element) || /^[a-zA-Zа-яА-ЯёЁ]+$/i.test(value);
+      return this.optional(element) || /^[a-zA-Z]+$/i.test(value);
     },
-    'Letters and spaces only please'
+    'Только буквы латинского алфавита'
   );
-  $('.form').each(function () {
+  jQuery.validator.addMethod(
+    'password',
+    function (value, element) {
+      return this.optional(element) || /^[0-9'".]/i.test(value);
+    },
+    'Только цифры'
+  );
+  $('.form').on('change', function () {
     $(this).validate({
       errorClass: 'invalid',
       rules: {
@@ -112,6 +152,16 @@ $(document).ready(function () {
           required: true,
           lettersonly: true,
         },
+        messageLogin: {
+          required: true,
+          lettersonly: true,
+          maxlength: 4,
+        },
+        messagePass: {
+          required: true,
+          maxlength: 4,
+          password: true,
+        },
       },
 
       messages: {
@@ -121,9 +171,17 @@ $(document).ready(function () {
 
         messageEmail: {
           required: 'Введите ваш Email',
-          email: 'Формат Email name@domain.com',
+          email: 'Формат Email user@domain.qa',
         },
-
+        messageLogin: {
+          required: 'Введите ваш логин',
+          maxlength: 'Введите не более 4х символов',
+        },
+        messagePass: {
+          required: 'Введите ваш пароль',
+          maxlength: 'Введите не более 4х символов',
+          password: 'Пароль должен состоять только из цифр',
+        },
         messageText: {
           required: 'Введите сообщение',
         },
@@ -182,5 +240,29 @@ $(document).ready(function () {
         $('#loadMore').attr('disabled', !0);
       }
     });
+  });
+  $('.navbar__button-small').on('click', function () {
+    $('body').toggleClass('font');
+  });
+
+  var closeThanksButton = $('.thanks__close');
+  closeThanksButton.on('click', closeModal);
+
+  $('.modal__button').on('click', function (e) {
+    e.preventDefault();
+    var firstInput = $('#firstInput').attr('aria-invalid').split(/\s+/);
+    var secondInput = $('#secondInput').attr('aria-invalid').split(/\s+/);
+    console.log(firstInput);
+    console.log(secondInput);
+    if (firstInput == 'false' && secondInput == 'false') {
+      //do something
+      console.log(123);
+      var thanksOverlay = $('.thanks');
+      var thanksDialog = $('.thanks__dialog');
+      thanksOverlay.addClass('thanks--visible');
+      thanksDialog.addClass('thanks__dialog--visible');
+      modalOverlay.removeClass('modal--visible');
+      modalDialog.removeClass('modal__dialog--visible');
+    }
   });
 });

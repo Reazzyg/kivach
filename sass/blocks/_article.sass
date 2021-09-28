@@ -18,6 +18,11 @@
     position: relative
     border-radius: 10px
     cursor: pointer
+    &__wrapper
+      display: flex
+    &__info
+      max-width: 230px
+
     &__span
       text-transform: uppercase
       font-weight: 900
@@ -28,7 +33,7 @@
       margin: 0
       margin-bottom: 25px
       margin-top: 20px
-      font-family: Roboto Slab
+
       font-style: normal
       font-weight: bold
       font-size: 25px
@@ -36,11 +41,12 @@
       color: #262D33
     &__text
       margin: 0
-      margin-bottom: 110px
       font-weight: normal
       font-size: 14px
       line-height: 20px
       color: #4B5157
+      max-height: 100px
+      overflow: auto
   &-comment
     padding: 12px 30px 12px 30px
     position: absolute
@@ -66,6 +72,7 @@
       font-size: 14px
       line-height: 20px
       color: #4B5157
+
     &__image
       margin-left: 15px
   &-portfolio
@@ -106,7 +113,7 @@
       text-transform: uppercase
       color: #E7D9FF
     &__text
-      font-family: Roboto Slab
+
       font-style: normal
       font-weight: bold
       font-size: 16px
@@ -147,7 +154,7 @@
       margin: 0
       position: absolute
       z-index: 2
-      font-family: Roboto Slab
+
       font-style: normal
       font-weight: bold
       font-size: 16px
@@ -200,7 +207,7 @@
       object-fit: cover
     &__title
       margin-left: 25px
-      font-family: Roboto Slab
+
       font-style: normal
       font-weight: bold
       font-size: 16px
@@ -220,7 +227,7 @@
       justify-content: space-between
     &__title
       margin: 0
-      font-family: Roboto Slab
+
       font-style: normal
       font-weight: bold
       font-size: 16px
@@ -231,6 +238,7 @@
       font-size: 14px
       line-height: 20px
       color: #4B5157
+      overflow: auto
     &__date
       font-size: 12px
       line-height: 15px
@@ -249,7 +257,7 @@
       justify-content: space-between
     &__title
       margin: 0
-      font-family: Roboto Slab
+
       font-style: normal
       font-weight: bold
       font-size: 16px
@@ -260,6 +268,7 @@
       font-size: 14px
       line-height: 20px
       color: #4B5157
+      overflow: auto
     &__date
       font-size: 12px
       line-height: 15px
@@ -278,7 +287,7 @@
       justify-content: space-between
     &__title
       margin: 0
-      font-family: Roboto Slab
+
       font-style: normal
       font-weight: bold
       font-size: 16px
@@ -289,6 +298,7 @@
       font-size: 14px
       line-height: 20px
       color: #4B5157
+      overflow: auto
     &__date
       font-size: 12px
       line-height: 15px
@@ -307,7 +317,7 @@
       justify-content: space-between
     &__title
       margin: 0
-      font-family: Roboto Slab
+
       font-style: normal
       font-weight: bold
       font-size: 16px
@@ -318,6 +328,7 @@
       font-size: 14px
       line-height: 20px
       color: #4B5157
+      overflow: auto
     &__date
       font-size: 12px
       line-height: 15px
@@ -329,11 +340,12 @@
     grid-column: 4
     grid-row: 2/4
     cursor: pointer
+    overflow: auto
     &__title
       padding-bottom: 13px
       border-bottom: 1px solid #D9DADB
       margin: 0
-      font-family: Roboto Slab
+
       font-style: normal
       font-weight: bold
       font-size: 16px
@@ -380,7 +392,7 @@
       margin: 0
       margin-bottom: 25px
       text-align: center
-      font-family: Roboto Slab
+
       font-style: normal
       font-weight: bold
       font-size: 20px

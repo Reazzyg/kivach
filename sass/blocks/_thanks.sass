@@ -1,0 +1,129 @@
+.thanks
+  visibility: hidden
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 9999
+  width: 100vw
+  height: 100vh
+  background-color: rgba(48, 47, 54, 0.8)
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: auto
+  &--visible
+    visibility: visible
+  &__dialog
+    display: flex
+    flex-direction: column
+    max-width: 360px
+    position: relative
+    padding: 30px 35px 40px 35px
+    background-color: #fff
+    border-radius: 8px
+    color: #4B5157
+    max-width: 478px
+    visibility: hidden
+    opacity: 0
+    transition: 0.2s
+    overflow: auto
+    &--visible
+      visibility: visible
+      opacity: 1
+  &__close
+    &::before
+      content: ''
+      position: absolute
+      right: 18px
+      top: 17px
+      text-decoration: none
+      cursor: pointer
+      background-image: url('../css/fontawesome/svgs/solid/times.svg')
+      background-repeat: no-repeat
+      height: 15px
+      width: 15px
+  &__title
+    margin-bottom: 15px
+
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 25px
+    color: #262D33
+  &__text
+    font-weight: 900
+    font-size: 14px
+    line-height: 20px
+    color: #262D33
+  &__form
+    display: flex
+    flex-direction: column
+    &-item
+      display: flex
+      flex-direction: column
+      margin-bottom: 15px
+      position: relative
+  &__select
+    display: block
+    padding: 10px 15px
+    font-size: 14px
+    line-height: 20px
+    outline: none
+    border-radius: 5px
+    border: 1px solid #D9DADB
+    color: #939699
+    outline: none
+    &-item
+      color: #262D33
+      outline: none
+      border: 1px solid #D9DAD
+      border-radius: 5px
+  &__input
+    outline: none
+    border: 1px solid #D9DADB
+    padding: 10px
+    border-radius: 5px
+    font-size: 14px
+    line-height: 18px
+
+  &__message
+    padding: 10px 15px
+    font-size: 15px
+    line-height: 18px
+    height: 120px
+    outline: none
+    border: 1px solid #D9DADB
+    border-radius: 5px
+    resize: none
+  &__button
+    align-self: flex-start
+    padding: 10px 25px
+    background-color: #4592FF
+    border: none
+    border-radius: 20px
+    color: #fff
+    text-transform: uppercase
+
+    font-style: normal
+    font-weight: 900
+    font-size: 14px
+    line-height: 20px
+    cursor: pointer
+  &__info
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: #E0E0E0
+  &__checkbox
+    width: 20px
+    height: 20px
+    border-radius: 3px
+    margin-right: 10px
+    color: #4592FF
+    border: 1px solid #D9DADB
+    cursor: pointer
+.checkbox
+  flex-direction: row
+  flex-wrap: wrap
+  margin-bottom: 30px

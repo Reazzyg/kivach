@@ -35,14 +35,21 @@
       visibility: visible
       opacity: 1
   &__close
-    position: absolute
-    right: 18px
-    top: 17px
-    text-decoration: none
-    cursor: pointer
+
+    &::before
+      content: ''
+      position: absolute
+      right: 18px
+      top: 17px
+      text-decoration: none
+      cursor: pointer
+      background-image: url('../css/fontawesome/svgs/solid/times.svg')
+      background-repeat: no-repeat
+      height: 15px
+      width: 15px
   &__title
     margin-bottom: 15px
-    font-family: Roboto Slab
+
     font-style: normal
     font-weight: bold
     font-size: 20px
@@ -83,6 +90,7 @@
     border-radius: 5px
     font-size: 14px
     line-height: 18px
+
   &__message
     padding: 10px 15px
     font-size: 15px
@@ -100,7 +108,7 @@
     border-radius: 20px
     color: #fff
     text-transform: uppercase
-    font-family: 'Lato'
+
     font-style: normal
     font-weight: 900
     font-size: 14px
